@@ -78,7 +78,7 @@
                 {
                     public function index()
                     {
-                        $this->render("seumodulo.index");
+                        return $this->render("seumodulo.index");
                     }
                 }
             </code>
@@ -100,7 +100,7 @@
                 {
                     public function index()
                     {
-                        $this->render("seumodulo.index", [
+                        return $this->render("seumodulo.index", [
                             'nome' => 'Walderlan Sena'
                         ]);
                     }
