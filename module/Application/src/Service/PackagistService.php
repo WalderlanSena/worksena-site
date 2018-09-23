@@ -8,13 +8,14 @@
 
 namespace Application\Service;
 
-use Application\Repository\PackagistRepository;
+use Application\Repository\Interfaces\PackagistRepositoryInterface;
+use Application\Service\Interfaces\PackagistServiceInterface;
 
-class PackagistService
+class PackagistService implements PackagistServiceInterface
 {
     private $packagistRepository;
 
-    public function __construct(PackagistRepository $packagistRepository)
+    public function __construct(PackagistRepositoryInterface $packagistRepository)
     {
         $this->packagistRepository = $packagistRepository;
     }

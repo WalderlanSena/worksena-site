@@ -47,4 +47,11 @@ return [
         'controller'    =>  DocumentationInitController::class,
         'action'        => 'controller',
     ],
+
+    'documentation-dependency' => [
+        'method'        => 'GET',
+        'route'         => '/documentacao/injecao-de-dependencia',
+        'controller'    =>  DocumentationInitController::class,
+        'action'        => 'dependency',
+    ],
 ];

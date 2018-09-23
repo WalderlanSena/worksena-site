@@ -1,0 +1,170 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="/assets/css/bar.css">
+<link rel="stylesheet" href="/assets/css/prism.css">
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header"></div>
+        <ul class="list-unstyled components">
+            <p class="text-center">Documentação</p>
+            <li>
+                <a href="/documentacao">Instalação</a>
+            </li>
+            <li>
+                <a href="/documentacao/modulo">Modulos</a>
+            </li>
+            <li>
+                <a href="/documentacao/rotas">Rotas</a>
+            </li>
+            <li>
+                <a href="/documentacao/controller">Controller</a>
+            </li>
+            <li class="active">
+                <a href="/documentacao/injecao-de-dependencia">Injeção de Dependência</a>
+            </li>
+            <li>
+                <a href="/documentacao/views">Views</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Componentes</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Worksena-Authetication</a>
+                    </li>
+                    <li>
+                        <a href="#">Worksena-orm</a>
+                    </li>
+                    <li>
+                        <a href="#">Worksena-validator</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://github.com/WalderlanSena/worksena" target="_blank" class="download"><i class="fab fa-github-alt"></i> Código fonte</a>
+            </li>
+            <li>
+                <a href="https://pag.ae/bfr49JT" target="_blank" class="article"><i class="fas fa-hand-holding-usd"></i> Fazer uma Doação</a>
+            </li>
+        </ul>
+        <p class="text-center"><strong>License - </strong> MIT</p>
+        <p class="text-center cita">"A vida não te paga pelo que você sabe, e sim pelo que leva as pessoas a fazerem com que o você sabe!"</p>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+        <p class="text-lg-right">
+            <button class="btn btn-sm btn-outline-danger mr-5" id="sidebarCollapse"><i class="fas fa-bars"></i> Documentação Menu</button>
+        </p>
+
+        <h1 class="text-danger"><i class="fas fa-syringe"></i> Injeção de Dependência</h1>
+        <div class="line"></div>
+
+        <h4 id="instalacao">Definindo uma nova dependência para o controller</h4>
+
+        <p class="text-justify">Há algumas formas de defenir as dependências das suas classes no worksena. A primeira é passando diretamente um objeto concreto para o construtor, ou passando os variáveis com valores padrões. Sendo assim automáticamente o woksena entenderá a dependencia e injetará a mesma na sua classe.</p>
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace SeuModulo\Controller;
+
+                use MVS\WorksenaMvc\AbstractActionController;
+
+                class IndexController extends AbstractActionController
+                {
+                    private $indexservice;
+                    private $key;
+
+                    public function __construct(IndexService $indexservice, $key = "3aa9a21e42ddb067b2caa023ffef4ccd")
+                    {
+                        $this->indexservice = $indexservice;
+                        $this->key          = $key;
+                    }
+                }
+            </code>
+        </pre>
+
+        <p class="text-justify">Todavia se o valor não for um objeto concreto, e se for uma variável mas não estiver um valor padrão, se faz nescessário registrar o valor a ser injetado nos arquivos de configução em <strong>config/services/index.service.php</strong>.</p>
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace Config;
+
+                return [
+                    'key' => '3aa9a21e42ddb067b2caa023ffef4ccd'
+                ];
+            </code>
+        </pre>
+
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace SeuModulo\Controller;
+
+                use MVS\WorksenaMvc\AbstractActionController;
+
+                class IndexController extends AbstractActionController
+                {
+                    private $indexservice;
+                    private $key;
+
+                    public function __construct(IndexService $indexservice, $key)
+                    {
+                        $this->indexservice = $indexservice;
+                        $this->key          = $key;
+                    }
+                }
+            </code>
+        </pre>
+        <div class="line"></div>
+        <h4 id="instalacao">Resolvendo casos de passagem via <strong>Interface</strong></h4>
+        <p class="text-justify">Caso deseje passar interfaces ao invés de objetos concretos para o contrutor, basta registrar a referência do mesmo no autoload da aplicação, <strong>config/autoload/module.config.php</strong></p>
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace Config\Autoload;
+
+                return [
+                    'di' => [
+                        IndexService::class => IndexServiceInterface::class
+                    ],
+                ];
+            </code>
+        </pre>
+
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace SeuModulo\Controller;
+
+                use MVS\WorksenaMvc\AbstractActionController;
+
+                class IndexController extends AbstractActionController
+                {
+                    private $indexservice;
+
+                    public function __construct(IndexServiceInterface $indexservice)
+                    {
+                        $this->indexservice = $indexservice;
+                    }
+                }
+            </code>
+        </pre>
+
+        <div class="col-md-12">
+            <div class="line"></div>
+            <p class="text-center">Feito com muito <i class="fas fa-heart text-danger"></i> Worksena</p>
+            <br>
+            <p class="text-center">Apoio -  <a href="https://www.mentesvirtuaissena.com" target="_blank">Mentes Virtuais Sena</a></p>
+        </div>
+    </div>
+</div>
+<script src="/assets/js/prism.js"></script>

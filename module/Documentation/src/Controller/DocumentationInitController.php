@@ -27,7 +27,7 @@ class DocumentationInitController extends AbstractActionController
             $response = $this->packagistService->findCountDownload();
         } catch (\Exception $exception) {}
 
-        return $this->render('documentation.init', true, [
+        return $this->render('documentation.init', [
             'version'   => $response['version']
         ]);
     }
@@ -40,7 +40,7 @@ class DocumentationInitController extends AbstractActionController
             $response = $this->packagistService->findCountDownload();
         } catch (\Exception $exception) {}
 
-        return $this->render('documentation.modulo', true, [
+        return $this->render('documentation.modulo', [
             'version'   => $response['version']
         ]);
     }
@@ -53,7 +53,7 @@ class DocumentationInitController extends AbstractActionController
             $response = $this->packagistService->findCountDownload();
         } catch (\Exception $exception) {}
 
-        return $this->render('documentation.route', true, [
+        return $this->render('documentation.route', [
             'version'   => $response['version']
         ]);
     }
@@ -66,7 +66,20 @@ class DocumentationInitController extends AbstractActionController
             $response = $this->packagistService->findCountDownload();
         } catch (\Exception $exception) {}
 
-        return $this->render('documentation.controller', true, [
+        return $this->render('documentation.controller', [
+            'version'   => $response['version']
+        ]);
+    }
+
+    public function dependency()
+    {
+        $this->setPageTitle('Injeção de Dependência');
+
+        try {
+            $response = $this->packagistService->findCountDownload();
+        } catch (\Exception $exception) {}
+
+        return $this->render('documentation.dependency', [
             'version'   => $response['version']
         ]);
     }

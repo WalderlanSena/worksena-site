@@ -2,14 +2,14 @@
 
 namespace Application\Controller;
 
-use Application\Service\PackagistService;
+use Application\Service\Interfaces\PackagistServiceInterface;
 use MVS\WorksenaMvc\AbstractActionController;
 
 class ApplicationController extends AbstractActionController
 {
     private $packagistService;
 
-    public function __construct(PackagistService $packagistService)
+    public function __construct(PackagistServiceInterface $packagistService)
     {
         $this->packagistService = $packagistService;
     }
@@ -22,7 +22,7 @@ class ApplicationController extends AbstractActionController
             $response = $this->packagistService->findCountDownload();
         } catch (\Exception $exception) {}
 
-        return $this->render('application.index', true, [
+        return $this->render('application.index', [
             'version'   => $response['version'],
             'downloads' => $response['downloads']
         ]);

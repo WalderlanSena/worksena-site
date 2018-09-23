@@ -8,10 +8,11 @@
 
 namespace Application\Repository;
 
+use Application\Repository\Interfaces\PackagistRepositoryInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 
-class PackagistRepository
+class PackagistRepository implements PackagistRepositoryInterface
 {
     private $client;
 
