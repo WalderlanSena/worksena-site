@@ -74,9 +74,12 @@
 
                 use MVS\WorksenaMvc\AbstractActionController;
 
-                class DocumentationInitController extends AbstractActionController
+                class IndexController extends AbstractActionController
                 {
-
+                    public function index()
+                    {
+                        $this->render("seumodulo.index");
+                    }
                 }
             </code>
         </pre>
