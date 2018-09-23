@@ -31,4 +31,17 @@ class DocumentationInitController extends AbstractActionController
             'version'   => $response['version']
         ]);
     }
+
+    public function module()
+    {
+        $this->setPageTitle('Modulo');
+
+        try {
+            $response = $this->packagistService->findCountDownload();
+        } catch (\Exception $exception) {}
+
+        return $this->render('documentation.modulo', true, [
+            'version'   => $response['version']
+        ]);
+    }
 }

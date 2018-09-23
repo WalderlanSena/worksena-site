@@ -26,4 +26,11 @@ return [
         'controller'    =>  DocumentationInitController::class,
         'action'        => 'init',
     ],
+
+    'documentation-module' => [
+        'method'        => 'GET',
+        'route'         => '/documentacao/modulo',
+        'controller'    =>  DocumentationInitController::class,
+        'action'        => 'module',
+    ],
 ];
