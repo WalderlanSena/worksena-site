@@ -40,4 +40,11 @@ return [
         'controller'    =>  DocumentationInitController::class,
         'action'        => 'route',
     ],
+
+    'documentation-controller' => [
+        'method'        => 'GET',
+        'route'         => '/documentacao/controller',
+        'controller'    =>  DocumentationInitController::class,
+        'action'        => 'controller',
+    ],
 ];
