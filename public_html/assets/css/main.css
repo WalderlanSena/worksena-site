@@ -1,0 +1,50 @@
+@import 'https://fonts.googleapis.com/css?family=Oswald';
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import 'https://fonts.googleapis.com/css?family=Josefin+Slab|Rosario';
+body {
+  background-color: aliceblue;
+}
+.home-index {
+  margin-top: 50px;
+}
+.logo-home {
+    display: block;
+    margin: 0 auto;
+}
+.home-index{
+  padding: 20px;
+}
+.home-index img{
+  display: block;
+  margin: 0px auto;
+}
+.home-index a{
+  font-size: 20px;
+  margin-left: 10px;
+  font-family: 'Raleway', sans-serif !important;
+  color: rgb(235, 88, 88) !important;
+}
+.home-index p{
+  font-family: 'Raleway', sans-serif !important;
+}
+.link{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.version{
+  margin-top: 20px;
+}
+.header-index {
+  padding: 100px;
+  background: url("/assets/img/bg.jpg") no-repeat center !important;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  -o-background-size: cover !important;
+  background-size: cover !important;
+  color: #FFF;
+  font-family: 'Raleway', sans-serif;
+}
+.nav-underline .nav-link:hover {
+  color: rgb(235, 88, 88) !important;
+  transition: color 1s;
+}

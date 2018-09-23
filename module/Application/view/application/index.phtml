@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand mr-auto mr-lg-0" href="/">Worksena - MicroFramework</a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+<!--            <li class="nav-item active">-->
+<!--                <a class="nav-link" href="http://getbootstrap.com/docs/4.1/examples/offcanvas/#">Dashboard <span class="sr-only">(current)</span></a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="http://getbootstrap.com/docs/4.1/examples/offcanvas/#">Notifications</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="http://getbootstrap.com/docs/4.1/examples/offcanvas/#">Profile</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--                <a class="nav-link" href="http://getbootstrap.com/docs/4.1/examples/offcanvas/#">Switch account</a>-->
+<!--            </li>-->
+<!--            <li class="nav-item dropdown">-->
+<!--                <a class="nav-link dropdown-toggle" href="https://example.com/" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Settings</a>-->
+<!--                <div class="dropdown-menu" aria-labelledby="dropdown01">-->
+<!--                    <a class="dropdown-item" href="http://getbootstrap.com/docs/4.1/examples/offcanvas/#">Action</a>-->
+<!--                    <a class="dropdown-item" href="http://getbootstrap.com/docs/4.1/examples/offcanvas/#">Another action</a>-->
+<!--                    <a class="dropdown-item" href="http://getbootstrap.com/docs/4.1/examples/offcanvas/#">Something else here</a>-->
+<!--                </div>-->
+<!--            </li>-->
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="o que você procura?" aria-label="Search">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</nav>
+
+<div class="nav-scroller bg-white box-shadow">
+    <nav class="nav nav-underline">
+        <a class="nav-link active" href="#"><strong>Documentação</strong></a>
+        <a class="nav-link" href="/"><i class="fas fa-code-branch"></i> Downloads <span style="color: #FFF;" class="badge badge-pill bg-danger align-text-bottom"><?= $downloads ?></span></a>
+        <a class="nav-link" href="/"><i class="fas fa-route"></i> Rotas</a>
+        <a class="nav-link" href="/"><i class="fas fa-syringe"></i> Injeção de Depedência</a>
+        <a class="nav-link" href="/"><i class="fas fa-gamepad"></i> Controller</a>
+        <a class="nav-link" href="/"><i class="far fa-eye"></i> Layout/Views</a>
+        <a class="nav-link" href="/"><i class="fas fa-university"></i> Banco de dados</a>
+        <a class="nav-link" href="/"><i class="fas fa-server"></i> Servidor</a>
+        <a class="nav-link" href="/"><i class="fab fa-codepen"></i> Componentes</a>
+    </nav>
+</div>
+
+<div class="header-index">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <figure>
+                    <img src="/assets/img/worksena-min.png" class="img-fluid logo-home" alt="">
+                </figure>
+                <h2 class="text-center"><?= $version ?></h2>
+                <h4 class="text-center">
+                    WorkSena é um micro framework PHP, desenvolvido com o objetivo de facilitar o processo de desenvolvimento de aplicações web,utilizando padrões de projetos especializados em performance de alto desenvolvimento na web.
+                </h4>
+                <p class="text-center">
+                    <button class="btn btn-danger btn-lg"><i class="fas fa-external-link-alt"></i> Vamos lá</button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
