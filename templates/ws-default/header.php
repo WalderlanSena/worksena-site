@@ -4,9 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="title" content="WorkSena Framework">
+    <meta name="title" content="<?= $this->getPageTitle("-") ?> WorkSena Micro Framework">
     <meta name="author" content="Walderlan Sena">
-    <meta name="description" content=">" />
+    <meta name="description" content="WorkSena é um micro framework PHP, desenvolvido com o objetivo de facilitar o processo de desenvolvimento de aplicações web,utilizando padrões de projetos especializados em performance de alto desenvolvimento na web." />
     <link rel="shortcut icon" href="/assets/img/favicon.png" />
     <title><?= $this->getPageTitle("-") ?> WorkSena Micro Framework</title>
     <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
