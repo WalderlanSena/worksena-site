@@ -84,6 +84,30 @@
             </code>
         </pre>
 
+        <div class="line"></div>
+
+        <h4 id="instalacao">Passando parâmetros para a <strong>view</strong></h4>
+        <p class="text-justify">Caso deseje passar valores para a sua view, realize procedimento via array como mostrado no exemplo abaixo, sendo assim cada indice do array se transformará em uma variável na sua view.</p>
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace SeuModulo\Controller;
+
+                use MVS\WorksenaMvc\AbstractActionController;
+
+                class IndexController extends AbstractActionController
+                {
+                    public function index()
+                    {
+                        $this->render("seumodulo.index", [
+                            'nome' => 'Walderlan Sena'
+                        ]);
+                    }
+                }
+            </code>
+        </pre>
+
         <div class="col-md-12">
             <div class="line"></div>
             <p class="text-center">Feito com muito <i class="fas fa-heart text-danger"></i> Worksena</p>
