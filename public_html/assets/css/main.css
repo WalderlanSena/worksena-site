@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import 'https://fonts.googleapis.com/css?family=Josefin+Slab|Rosario';
 body {
-  background-color: aliceblue;
+  /*background-color: aliceblue;*/
 }
 .home-index {
   margin-top: 50px;
@@ -47,4 +47,9 @@ body {
 .nav-underline .nav-link:hover {
   color: rgb(235, 88, 88) !important;
   transition: color 1s;
+}
+.cita {
+  font-size: 10px !important;
+  color: #FFF !important;
+  font-style: oblique;
 }

@@ -3,19 +3,27 @@
 namespace Config\Router;
 
 use Application\Controller\ApplicationController;
+use Documentation\Controller\DocumentationInitController;
 
 return [
-    'main' => [
+    'home' => [
         'method'        => 'GET',
         'route'         => '/',
         'controller'    =>  ApplicationController::class,
         'action'        => 'index',
     ],
 
-    'home' => [
+    'documentation' => [
         'method'        => 'GET',
-        'route'         => '/home',
-        'controller'    =>  ApplicationController::class,
-        'action'        => 'index',
+        'route'         => '/documentacao',
+        'controller'    =>  DocumentationInitController::class,
+        'action'        => 'init',
+    ],
+
+    'documentation-init' => [
+        'method'        => 'GET',
+        'route'         => '/documentacao/instalacao',
+        'controller'    =>  DocumentationInitController::class,
+        'action'        => 'init',
     ],
 ];

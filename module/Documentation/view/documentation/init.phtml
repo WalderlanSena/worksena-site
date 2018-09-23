@@ -1,0 +1,126 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet" href="/assets/css/bar.css">
+<link rel="stylesheet" href="/assets/css/prism.css">
+
+<div class="wrapper">
+    <!-- Sidebar  -->
+    <nav id="sidebar">
+        <div class="sidebar-header"></div>
+        <ul class="list-unstyled components">
+            <p class="text-center">Documentação</p>
+            <li class="active">
+                <a href="/documentacao">Instalação</a>
+            </li>
+            <li>
+                <a href="/documentacao/modulos">Modulos</a>
+            </li>
+            <li>
+                <a href="/documentacao/rotas">Rotas</a>
+            </li>
+            <li>
+                <a href="/documentacao/controller">Controller</a>
+            </li>
+            <li>
+                <a href="/documentacao/views">Views</a>
+            </li>
+            <li>
+                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Componentes</a>
+                <ul class="collapse list-unstyled" id="pageSubmenu">
+                    <li>
+                        <a href="#">Worksena-Authetication</a>
+                    </li>
+                    <li>
+                        <a href="#">Worksena-orm</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <ul class="list-unstyled CTAs">
+            <li>
+                <a href="https://github.com/WalderlanSena/worksena" target="_blank" class="download"><i class="fab fa-github-alt"></i> Código fonte</a>
+            </li>
+            <li>
+                <a href="https://pag.ae/bfr49JT" target="_blank" class="article"><i class="fas fa-hand-holding-usd"></i> Fazer uma Doação</a>
+            </li>
+        </ul>
+        <p class="text-center"><strong>License - </strong> MIT</p>
+        <p class="text-center cita">"A vida não te paga pelo que você sabe, e sim pelo que leva as pessoas a fazerem com que o você sabe!"</p>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content">
+        <p class="text-lg-right">
+            <button class="btn btn-sm btn-outline-danger mr-5" id="sidebarCollapse"><i class="fas fa-bars"></i> Documentação Menu</button>
+        </p>
+
+        <h1 class="text-danger"><i class="fas fa-download"></i> Intalando o Worksena</h1>
+        <div class="line"></div>
+
+        <h4 id="instalacao">Requisitos do MicroFramework</h4>
+        <p class="text-justify">
+            O micro framework WorkSena tem alguns requisitos para seu funcionamento, todavia a maioria dos sevidores hoje, tanto local quanto online utilizam as configurações listadas abaixo. Se houver algum problema entre em <a href="/contato">contato.</a>
+        </p><!-- end p-->
+        <ul>
+            <li>PHP >= 7.0</li>
+            <li>PDO PHP Extension</li>
+            <li>Composer</li>
+        </ul><!-- end ul-->
+
+        <h3 class="text-center">Instalação via Composer</h3>
+        <pre class="language-shell">
+            <code class="language-shell">
+                composer create-project mvs/worksena
+            </code>
+        </pre>
+        <div class="line"></div>
+        <h3 class="text-center">A instalação também pode ser feita atráves do github:</h3>
+        <pre class="language-git">
+            <code class="language-git">
+                git@github.com:WalderlanSena/worksena.git     - Via SSH <br>
+                https://github.com/WalderlanSena/worksena.git - Via HTTPS
+            </code>
+        </pre>
+        <div class="line"></div>
+
+        <h2 class="text-danger"><i class="fas fa-sitemap"></i> Estrutura pós-instalação</h2>
+        <div class="line"></div>
+        <p class="text-justify">O novo worksena trabalha de forma modularizada, que proporciona um desenvolvimento mais desacoplatado e independênte para sua aplicação.</p>
+        <pre class="language-shell">
+           <code class="language-shell">
+               .
+                ├── config
+                │   ├── routes
+                │   └── services
+                ├── module
+                │   └── Application
+                │       ├── src
+                │       │   ├── Controller
+                │       │   ├── Repository
+                │       │   └── Service
+                │       └── view
+                │           └── application
+                ├── public
+                │   └── assets
+                │       ├── css
+                │       └── img
+                ├── templates
+                │   └── ws-default
+           </code>
+        </pre>
+
+        <div class="line"></div>
+        <h2 class="text-danger"><i class="fas fa-server"></i> Iniciando o servidor</h2>
+        <div class="line"></div>
+        <p class="text-justify">Após a instalação do micro framework</p>
+        <pre class="language-shell">
+           <code class="language-shell">
+               composer serve
+               php -S 0.0.0.0:8000 -t public/
+           </code>
+        </pre>
+    </div>
+</div>
+<script src="/assets/js/prism.js"></script>
+
+

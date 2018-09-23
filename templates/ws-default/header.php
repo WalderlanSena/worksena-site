@@ -15,3 +15,17 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+    <a class="navbar-brand mr-auto mr-lg-0" href="/">Worksena - MicroFramework - <?= $version ?></a>
+    <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav  mr-auto">
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="o que você procura?" aria-label="Search">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</nav>

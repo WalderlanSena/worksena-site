@@ -22,7 +22,8 @@
     "autoload": {
       "psr-4": {
         "Config\\": "config/",
-        "Application\\": "module/Application/src"
+        "Application\\": "module/Application/src",
+        "Documentation\\": "module/Documentation/src"
       }
     },
     "scripts": {
