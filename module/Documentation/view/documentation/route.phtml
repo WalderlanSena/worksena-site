@@ -8,13 +8,13 @@
         <div class="sidebar-header"></div>
         <ul class="list-unstyled components">
             <p class="text-center">Documentação</p>
-            <li class="active">
+            <li>
                 <a href="/documentacao">Instalação</a>
             </li>
             <li>
                 <a href="/documentacao/modulo">Modulos</a>
             </li>
-            <li>
+            <li class="active">
                 <a href="/documentacao/rotas">Rotas</a>
             </li>
             <li>
@@ -60,71 +60,31 @@
             <button class="btn btn-sm btn-outline-danger mr-5" id="sidebarCollapse"><i class="fas fa-bars"></i> Documentação Menu</button>
         </p>
 
-        <h1 class="text-danger"><i class="fas fa-download"></i> Intalando o Worksena</h1>
+        <h1 class="text-danger"><i class="fas fa-download"></i> Configurando rotas da aplicação</h1>
         <div class="line"></div>
 
-        <h4 id="instalacao">Requisitos do MicroFramework</h4>
-        <p class="text-justify">
-            O micro framework WorkSena tem alguns requisitos para seu funcionamento, todavia a maioria dos sevidores hoje, tanto local quanto online utilizam as configurações listadas abaixo. Se houver algum problema entre em <a href="/contato">contato.</a>
-        </p><!-- end p-->
-        <ul>
-            <li>PHP >= 7.0</li>
-            <li>PDO PHP Extension</li>
-            <li>Composer</li>
-        </ul><!-- end ul-->
+        <h4 id="instalacao">Adicionando rotas</h4>
 
-        <h5 class="text-center">Instalação via Composer</h5>
-        <pre class="language-shell">
-            <code class="language-shell">
-                composer create-project mvs/worksena
+        <p class="text-justify">Para criar uma nova rota na aplicação você deve ir no diretório <strong>config/routes</strong> e criar ou utilizar o arquivo de rotas já existênte com a seguite estrutura.</p>
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace Config\Router;
+
+                use Application\Controller\ApplicationController;
+
+                return [
+                    'home' => [
+                        'method'        => 'GET',
+                        'route'         => '/sua-rota',
+                        'controller'    =>  ApplicationController::class,
+                        'action'        => 'index',
+                    ],
+                ];
             </code>
         </pre>
-        <div class="line"></div>
-        <h5 class="text-center">A instalação também pode ser feita atráves do github:</h5>
-        <pre class="language-git">
-            <code class="language-git">
-                git@github.com:WalderlanSena/worksena.git     - Via SSH <br>
-                https://github.com/WalderlanSena/worksena.git - Via HTTPS
-            </code>
-        </pre>
-        <div class="line"></div>
-
-        <h2 class="text-danger"><i class="fas fa-sitemap"></i> Estrutura pós-instalação</h2>
-        <div class="line"></div>
-        <p class="text-justify">O novo worksena trabalha de forma modularizada, que proporciona um desenvolvimento mais desacoplatado e independênte para sua aplicação.</p>
-        <pre class="language-shell">
-           <code class="language-shell">
-               .
-                ├── config
-                │   ├── routes
-                │   └── services
-                ├── module
-                │   └── Application
-                │       ├── src
-                │       │   ├── Controller
-                │       │   ├── Repository
-                │       │   └── Service
-                │       └── view
-                │           └── application
-                ├── public
-                │   └── assets
-                │       ├── css
-                │       └── img
-                ├── templates
-                │   └── ws-default
-           </code>
-        </pre>
-
-        <div class="line"></div>
-        <h2 class="text-danger"><i class="fas fa-server"></i> Iniciando o servidor</h2>
-        <div class="line"></div>
-        <p class="text-justify">Após a instalação do micro framework</p>
-        <pre class="language-shell">
-           <code class="language-shell">
-               composer serve
-               php -S 0.0.0.0:8000 -t public/
-           </code>
-        </pre>
+        <p class="text-justify"> Dentro do diretório <strong>config/routes</strong> você pode criar diversos arquivos de definição de rotas, sendo uma boa prática nomeá-los os mesmos com a terminação <strong>nomedoarquivo.router.php</strong></p>
 
         <div class="col-md-12">
             <div class="line"></div>
@@ -135,5 +95,3 @@
     </div>
 </div>
 <script src="/assets/js/prism.js"></script>
-
-

@@ -33,4 +33,11 @@ return [
         'controller'    =>  DocumentationInitController::class,
         'action'        => 'module',
     ],
+
+    'documentation-routes' => [
+        'method'        => 'GET',
+        'route'         => '/documentacao/rotas',
+        'controller'    =>  DocumentationInitController::class,
+        'action'        => 'route',
+    ],
 ];

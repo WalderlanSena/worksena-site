@@ -44,4 +44,17 @@ class DocumentationInitController extends AbstractActionController
             'version'   => $response['version']
         ]);
     }
+
+    public function route()
+    {
+        $this->setPageTitle('Rotas');
+
+        try {
+            $response = $this->packagistService->findCountDownload();
+        } catch (\Exception $exception) {}
+
+        return $this->render('documentation.route', true, [
+            'version'   => $response['version']
+        ]);
+    }
 }
