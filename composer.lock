@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "1e78610010d9fcbbe493d54d722b4630",
@@ -259,16 +259,16 @@
         },
         {
             "name": "mvs/worksena-router",
-            "version": "v1.1.3",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WalderlanSena/worksena-router.git",
-                "reference": "9643597d4f08a6c8825bca80101ebdfaf1696d82"
+                "reference": "ea6a504bc45fd16a250297b7dd326bc5b0521b7c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WalderlanSena/worksena-router/zipball/9643597d4f08a6c8825bca80101ebdfaf1696d82",
-                "reference": "9643597d4f08a6c8825bca80101ebdfaf1696d82",
+                "url": "https://api.github.com/repos/WalderlanSena/worksena-router/zipball/ea6a504bc45fd16a250297b7dd326bc5b0521b7c",
+                "reference": "ea6a504bc45fd16a250297b7dd326bc5b0521b7c",
                 "shasum": ""
             },
             "require": {
@@ -294,7 +294,7 @@
                 }
             ],
             "description": "Gerenciador de Rotas HTTP Worksena",
-            "time": "2018-09-15T07:39:29+00:00"
+            "time": "2018-11-25T02:47:21+00:00"
         },
         {
             "name": "psr/http-message",
