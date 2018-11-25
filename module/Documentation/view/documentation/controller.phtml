@@ -108,6 +108,38 @@
             </code>
         </pre>
 
+        <div class="line"></div>
+
+        <h4 id="instalacao">Requisições Http</h4>
+        <p class="text-justify">Principais metódos para trabalhar com requisições Http no worksena</p>
+        <pre class="language-php">
+            <code class="language-php">
+                &lt;?php
+
+                namespace SeuModulo\Controller;
+
+                use MVS\WorksenaMvc\AbstractActionController;
+
+                class IndexController extends AbstractActionController
+                {
+                    public function index(RequestService $requestService)
+                    {
+                        $requestService->get('id');
+                        $requestService->getParams('test');
+                        $requestService->getBodyPostRequest();
+                        $requestService->getBodyFormData();
+                        $requestService->getBodyJson();
+                        $requestService->getBodyFormUrlEncoded();
+                        $requestService->getDataRequest();
+
+                        return $this->render("seumodulo.index", [
+                            'nome' => 'Walderlan Sena'
+                        ]);
+                    }
+                }
+            </code>
+        </pre>
+
         <div class="col-md-12">
             <div class="line"></div>
             <p class="text-center">Feito com muito <i class="fas fa-heart text-danger"></i> Worksena</p>
